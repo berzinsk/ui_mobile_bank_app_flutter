@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/dashboard_header.dart';
+
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
 
@@ -7,7 +9,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: const [
-        Text('Dashboard screen'),
+        DashboardHeader(),
       ],
     );
   }
