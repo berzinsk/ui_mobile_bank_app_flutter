@@ -18,9 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: SafeArea(
-          child: Dashboard(),
-        ),
+        body: Dashboard(),
       ),
     );
   }
