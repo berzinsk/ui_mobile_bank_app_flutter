@@ -7,10 +7,32 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        DashboardHeader(),
-      ],
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [
+            Color(0xff00014f),
+            Color(0xff3a6073),
+          ],
+        ),
+      ),
+      child: SafeArea(
+        bottom: false,
+        child: Column(
+          children: [
+            const DashboardHeader(),
+            Expanded(
+              child: Container(
+                alignment: Alignment.topLeft,
+                color: Colors.red,
+                child: Row(children: [Text('Sample')]),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
