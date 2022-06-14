@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/dashboard_header.dart';
+import '../components/transactions.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -26,8 +27,15 @@ class Dashboard extends StatelessWidget {
             Expanded(
               child: Container(
                 alignment: Alignment.topLeft,
-                color: Colors.red,
-                child: Row(children: [Text('Sample')]),
+                color: const Color(0xfff5f5f5),
+                child: Column(
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      child: Transactions(),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
