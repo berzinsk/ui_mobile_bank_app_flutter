@@ -62,9 +62,70 @@ class DashboardHeader extends StatelessWidget {
                     )),
               ],
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 28),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                HeaderSection(
+                  title: 'Transfer',
+                  imageName: 'icon-transfer',
+                ),
+                HeaderSection(
+                  title: 'Withdraw',
+                  imageName: 'icon-withdraw',
+                ),
+                HeaderSection(
+                  title: 'Top Up',
+                  imageName: 'icon-top-up',
+                ),
+                HeaderSection(
+                  title: 'More',
+                  imageName: 'icon-more-settings',
+                ),
+              ],
+            ),
+          ),
         ],
       ),
+    );
+  }
+}
+
+class HeaderSection extends StatelessWidget {
+  final String title;
+  final String imageName;
+
+  const HeaderSection({
+    Key? key,
+    required this.title,
+    required this.imageName,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            color: Colors.white,
+          ),
+          width: 40,
+          height: 40,
+          child: Image(image: AssetImage('asset/images/$imageName.png')),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
