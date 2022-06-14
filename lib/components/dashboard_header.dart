@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './dashboard_header_action.dart';
+
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({Key? key}) : super(key: key);
 
@@ -68,19 +70,19 @@ class DashboardHeader extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                HeaderSection(
+                HeaderAction(
                   title: 'Transfer',
                   imageName: 'icon-transfer',
                 ),
-                HeaderSection(
+                HeaderAction(
                   title: 'Withdraw',
                   imageName: 'icon-withdraw',
                 ),
-                HeaderSection(
+                HeaderAction(
                   title: 'Top Up',
                   imageName: 'icon-top-up',
                 ),
-                HeaderSection(
+                HeaderAction(
                   title: 'More',
                   imageName: 'icon-more-settings',
                 ),
@@ -89,43 +91,6 @@ class DashboardHeader extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class HeaderSection extends StatelessWidget {
-  final String title;
-  final String imageName;
-
-  const HeaderSection({
-    Key? key,
-    required this.title,
-    required this.imageName,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.white,
-          ),
-          width: 40,
-          height: 40,
-          child: Image(image: AssetImage('asset/images/$imageName.png')),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: Text(
-            title,
-            style: const TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
