@@ -29,6 +29,7 @@ class HeaderAction extends StatelessWidget {
             title,
             style: const TextStyle(
               color: Colors.white,
+              fontSize: 12,
             ),
           ),
         ),
