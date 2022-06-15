@@ -3,9 +3,18 @@ import 'package:flutter/material.dart';
 import '../components/dashboard_header.dart';
 import '../components/transactions.dart';
 import '../components/transaction_filter.dart';
+import '../components/transaction_list_item.dart';
+import '../model/transaction.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({Key? key}) : super(key: key);
+  Dashboard({Key? key}) : super(key: key);
+
+  final Transaction transaction = Transaction(
+    from: 'Karlis Berzins',
+    to: 'BRI',
+    amount: '150.000',
+    date: DateTime.now(),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +39,17 @@ class Dashboard extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 color: const Color(0xfff5f5f5),
                 child: Column(
-                  children: const [
-                    Padding(
+                  children: [
+                    const Padding(
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: Transactions(),
                     ),
-                    TransactionFilter(),
+                    const TransactionFilter(),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(top: 16, left: 10, right: 10),
+                      child: TransactionListItem(transaction: transaction),
+                    )
                   ],
                 ),
               ),
