@@ -67,9 +67,9 @@ class TransactionItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xff151d3b), width: 0.2),
+        border: Border.all(color: const Color(0xff151d3b), width: 0.2),
         borderRadius: BorderRadius.circular(4),
-        color: selected ? Color(0xff151d3b) : Colors.white,
+        color: selected ? const Color(0xff151d3b) : Colors.white,
       ),
       child: Text(
         text,
