@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/dashboard_header.dart';
 import '../components/transactions.dart';
+import '../components/transaction_filter.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class Dashboard extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: Transactions(),
                     ),
+                    TransactionFilter(),
                   ],
                 ),
               ),
