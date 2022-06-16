@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './screens/dashboard.dart';
+import './screens/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: Dashboard(),
+      home: const Scaffold(
+        body: Settings(),
       ),
     );
   }
