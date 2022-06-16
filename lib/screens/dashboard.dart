@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../components/dashboard_header.dart';
-import '../components/transactions.dart';
-import '../components/transaction_filter.dart';
-import '../components/transaction_list_item.dart';
+import '../components/dashboard/dashboard_header.dart';
+import '../components/dashboard/transactions.dart';
+import '../components/dashboard/transaction_filter.dart';
+import '../components/dashboard/transaction_list_item.dart';
 import '../model/transaction.dart';
 
 class Dashboard extends StatelessWidget {
