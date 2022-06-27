@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/profile/profile_header.dart';
 import '../components/profile/menu.dart';
+import '../components/profile/settings_footer.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
@@ -17,34 +18,10 @@ class Settings extends StatelessWidget {
           children: [
             const ProfileHeader(),
             const Menu(),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.only(left: 30, right: 30, top: 16),
-              color: const Color(0xfff5f5f5),
-              child: TextButton(
-                child: const Text(
-                  'Log out',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xffee1111),
-                  ),
-                ),
-                onPressed: () {},
-                style: ButtonStyle(
-                  fixedSize:
-                      MaterialStateProperty.all(const Size.fromHeight(40)),
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        side: const BorderSide(color: Color(0xffee1111))),
-                  ),
-                ),
-              ),
-            ),
+            const SettingsFooter(),
             Expanded(
               child: Container(
-                color: Color(0xfff5f5f5),
+                color: const Color(0xfff5f5f5),
               ),
             ),
           ],
