@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'settings_menu_item.dart';
+
 const listItems = [
   'Account',
   'Debit Card Settings',
@@ -23,18 +25,8 @@ class Menu extends StatelessWidget {
         child: ListView.separated(
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
-            return Container(
-              height: 56,
-              color: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(listItems[index]),
-                  const Image(
-                      image: AssetImage('asset/images/icon_chevron_right.png'))
-                ],
-              ),
+            return SettingsMenuItem(
+              text: listItems[index],
             );
           },
           separatorBuilder: (context, index) => const Divider(height: 8),
