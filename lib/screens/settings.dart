@@ -19,7 +19,7 @@ class Settings extends StatelessWidget {
             const Menu(),
             Container(
               width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 16),
               color: const Color(0xfff5f5f5),
               child: TextButton(
                 child: const Text(
@@ -40,6 +40,11 @@ class Settings extends StatelessWidget {
                         side: const BorderSide(color: Color(0xffee1111))),
                   ),
                 ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                color: Color(0xfff5f5f5),
               ),
             ),
           ],
